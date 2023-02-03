@@ -1,0 +1,42 @@
+kind: job
+metadata:
+  name: func-hub
+  tag: version2
+  hash: 6a7a4d57622b2dc44a855d60ad601f99575918fe
+  project: hub-shapira
+spec:
+  command: ''
+  args: []
+  image: mlrun/mlrun
+  build:
+    functionSourceCode: ZGVmIGZ1bmMoeCk6CiAgICB4ID0geCArMQogICAgcmV0dXJuIHg=
+    commands: []
+    code_origin: ./function.py
+    origin_filename: ./function.py
+  entry_points:
+    func:
+      name: func
+      doc: ''
+      parameters:
+      - name: x
+        default: ''
+      outputs:
+      - default: ''
+      lineno: 1
+  description: ''
+  default_handler: func
+  disable_auto_mount: false
+  env: []
+  resources:
+    requests:
+      memory: 1Mi
+      cpu: 25m
+    limits:
+      memory: 20Gi
+      cpu: '2'
+  priority_class_name: igz-workload-medium
+  preemption_mode: prevent
+  affinity: null
+  tolerations: null
+  security_context: {}
+verbose: false
